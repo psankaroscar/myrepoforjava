@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26-May-2017 22:24:05 by Hibernate Tools 5.2.0.Beta1 -->
+<hibernate-mapping>
+    <class name="com.teknatio.hiber.Users" table="USERS" optimistic-lock="version">
+        <id name="id" type="short">
+            <column name="ID" precision="4" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="firstName" type="string">
+            <column name="FIRST_NAME" length="20" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="LAST_NAME" length="20" />
+        </property>
+        <property name="userName" type="string">
+            <column name="USER_NAME" length="20" />
+        </property>
+        <property name="password" type="string">
+            <column name="PASSWORD" length="12" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="30" unique="true" />
+        </property>
+        <property name="mobile" type="string">
+            <column name="MOBILE" length="15" />
+        </property>
+    </class>
+</hibernate-mapping>
